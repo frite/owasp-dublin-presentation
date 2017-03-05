@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo &quot;BASH Commands like integration tests&quot;
+echo &quot;===================&quot;
+export IP=&quot;172.17.0.2&quot;
+export TARGET=&quot;http://&quot;$IP
+export PROXY=&quot;127.0.0.1:8500&quot;
+export ZAP=&quot;http://zap&quot;
+curl -x $PROXY -L $TARGET
+echo &quot;Hitted index.php&quot;
+curl -x $PROXY -L $TARGET/index.php?id=5
+echo &quot;id=5&quot;
+curl -x $PROXY -L $TARGET/index.php?id=6
+echo &quot;id=6&quot;
+curl -x $PROXY -L $TARGET/b/index.php
+echo &quot;Hitted b/index.php&quot;
+echo &quot;=====================&quot;
+echo &quot;Configuring ZAP for attack&quot;
+echo &quot;1. Create context&quot;
+curl -x $PROXY -L http://zap/JSON/context/action/newContext/?contextName=test
+echo &quot;2. Include target in context&quot;
+curl -x $PROXY -L &quot;http://zap/JSON/context/action/includeInContext/?zapapiformat=JSON&amp;contextName=test&amp;regex=\Qhttp%3A%2F%2F&quot;$IP&quot;%2F\E.*&quot;
+echo &quot;3. Spider target&quot;
+curl -x $PROXY -L &quot;http://zap/JSON/spider/action/scan/?zapapiformat=JSON&amp;url=&quot;$TARGET
+echo &quot;3.a. Spider results&quot;
+sleep 10
+curl -x $PROXY -L &quot;http://zap/JSON/spider/view/results/?zapapiformat=JSON&amp;scanId=0&quot;
+echo &quot;4. Active scan -the one that finds ths vulns anyway-&quot;
+curl -x $PROXY -L &quot;http://zap/JSON/ascan/action/scan/?zapapiformat=JSON&amp;url=&quot;$TARGET
+sleep 20
+echo &quot;5. Results&quot;
+curl -x $PROXY -L &quot;zap/XML/core/view/alerts/?zapapiformat=JSON&amp;baseurl=&quot;$TARGET
+
+</command>
+    </hudson.tasks.Shell>
+    <fr.novia.zaproxyplugin.ZAProxyBuilder plugin="zaproxy@1.2.1">
+      <startZAPFirst>true</startZAPFirst>
+      <zaproxy>
+        <zapProxyHost>localhost</zapProxyHost>
+        <zapProxyPort>8500</zapProxyPort>
+        <autoInstall>true</autoInstall>
+        <toolUsed>ZAProxy_243</toolUsed>
+        <zapHome>ZAPROXY_HOME</zapHome>
+        <timeoutInSec>60</timeoutInSec>
+        <filenameLoadSession></filenameLoadSession>
+        <targetURL>http://*.workdaysuv.com/</targetURL>
+        <excludedUrl></excludedUrl>
+        <scanMode>NOT_AUTHENTICATED</scanMode>
+        <spiderURL>false</spiderURL>
+        <spiderAsUser>false</spiderAsUser>
+        <scanURLAsUser>false</scanURLAsUser>
+        <scriptUsername></scriptUsername>
+        <scriptPassword></scriptPassword>
+        <scriptLoggedInIndicator></scriptLoggedInIndicator>
+        <authenticationScriptName></authenticationScriptName>
+        <username></username>
+        <password></password>
+        <usernameParameter></usernameParameter>
+        <passwordParameter></passwordParameter>
+        <extraPostData></extraPostData>
+        <loginUrl></loginUrl>
+        <loggedInIndicator></loggedInIndicator>
+        <ajaxSpiderURL>false</ajaxSpiderURL>
+        <ajaxSpiderURLAsUser>false</ajaxSpiderURLAsUser>
+        <scanURL>false</scanURL>
+        <saveReports>true</saveReports>
+        <chosenFormats>
+          <string>html</string>
+        </chosenFormats>
+        <filenameReports>demo</filenameReports>
+        <saveSession>true</saveSession>
+        <filenameSaveSession>74</filenameSaveSession>
+        <zapDefaultDir></zapDefaultDir>
+        <chosenPolicy></chosenPolicy>
+        <cmdLinesZAP>
+          <fr.novia.zaproxyplugin.ZAPcmdLine>
+            <cmdLineOption>-config</cmdLineOption>
+            <cmdLineValue>api.disablekey=true</cmdLineValue>
+          </fr.novia.zaproxyplugin.ZAPcmdLine>
+        </cmdLinesZAP>
+        <jdk>InheritFromJob</jdk>
+        <createJiras>false</createJiras>
+        <jiraBaseURL></jiraBaseURL>
+        <jiraUserName></jiraUserName>
+        <jiraPassword></jiraPassword>
+        <projectKey></projectKey>
+        <assignee></assignee>
+        <alertHigh>false</alertHigh>
+        <alertMedium>false</alertMedium>
+        <alertLow>false</alertLow>
+        <filterIssuesByResourceType>false</filterIssuesByResourceType>
+      </zaproxy>
+      <zapProxyHost>localhost</zapProxyHost>
+      <zapProxyPort>8500</zapProxyPort>
+    </fr.novia.zaproxyplugin.ZAProxyBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <com.cloudbees.jenkins.plugins.customtools.CustomToolInstallWrapper plugin="custom-tools-plugin@0.4.4">
+      <selectedTools>
+        <com.cloudbees.jenkins.plugins.customtools.CustomToolInstallWrapper_-SelectedTool>
+          <name>ZAProxy_243</name>
+        </com.cloudbees.jenkins.plugins.customtools.CustomToolInstallWrapper_-SelectedTool>
+      </selectedTools>
+      <multiconfigOptions>
+        <skipMasterInstallation>false</skipMasterInstallation>
+      </multiconfigOptions>
+      <convertHomesToUppercase>false</convertHomesToUppercase>
+    </com.cloudbees.jenkins.plugins.customtools.CustomToolInstallWrapper>
+  </buildWrappers>
+</project>

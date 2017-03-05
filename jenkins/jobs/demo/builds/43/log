@@ -1,0 +1,422 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[CustomTools] - ZAProxy_243: Starting installation
+[CustomTools] - ZAProxy_243: Tool is installed at /var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/ZAProxy_243/ZAP_2.4.3
+[CustomTools] - ZAProxy_243: Setting ZAProxy_243_HOME=/var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/ZAProxy_243/ZAP_2.4.3
+Building in workspace /var/jenkins_home/workspace/demo
+------- START Replace environment variables -------
+ReportName : demo
+------- END Replace environment variables -------
+------- START Prebuild -------
+zapProgram = /var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/ZAProxy_243/ZAP_2.4.3
+targetURL = http://*.workdaysuv.com/
+zapProxyHost = localhost
+zapProxyPort = 8500
+Start ZAProxy [/var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/ZAProxy_243/ZAP_2.4.3/zap.sh]
+[ZAP_2.4.3] $ /var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/ZAProxy_243/ZAP_2.4.3/zap.sh -daemon -host localhost -port 8500 -config api.key=ZAPROXY-PLUGIN -config api.disablekey=true
+Found Java version 1.8.0_72-internal
+Available memory: 2002 MB
+Setting jvm heap size: -Xmx512m
+0 [main] INFO org.zaproxy.zap.DaemonBootstrap  - OWASP ZAP 2.4.3 started.
+653 [main] INFO hsqldb.db.HSQLDB379AF3DEBD.ENGINE  - dataFileCache open start
+676 [main] INFO hsqldb.db.HSQLDB379AF3DEBD.ENGINE  - dataFileCache open end
+1333 [main] INFO org.parosproxy.paros.common.AbstractParam  - Setting config api.key = ZAPROXY-PLUGIN was ZAPROXY-PLUGIN
+1336 [main] INFO org.parosproxy.paros.common.AbstractParam  - Setting config api.disablekey = true was true
+1343 [main] INFO org.parosproxy.paros.network.SSLConnector  - Reading supported SSL/TLS protocols...
+1348 [main] INFO org.parosproxy.paros.network.SSLConnector  - Using a SSLEngine...
+1787 [main] INFO org.parosproxy.paros.network.SSLConnector  - Done reading supported SSL/TLS protocols: [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2]
+1792 [main] INFO org.parosproxy.paros.extension.option.OptionsParamCertificate  - Unsafe SSL renegotiation disabled.
+1911 [ZAP-daemon] INFO org.zaproxy.zap.control.ExtensionFactory  - Loading extensions
+4438 [ZAP-daemon] INFO org.zaproxy.zap.control.ExtensionFactory  - Extensions loaded
+4671 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Change user agent to other browsers. 
+4671 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Detect insecure or potentially malicious content in HTTP responses.
+4671 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Detect and alert 'Set-cookie' attempt in HTTP response for modification.
+4672 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Avoid browser cache (strip off IfModifiedSince)
+4672 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Log cookies sent by browser.
+4672 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Log unique GET queries into file:filter/get.xls
+4672 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Log unique POST queries into file:  filter/post.xls
+4672 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Log request and response into file: filter/message.txt
+4673 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Replace HTTP request body using defined pattern.
+4673 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Replace HTTP request header using defined pattern.
+4673 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Replace HTTP response body using defined pattern.
+4673 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Replace HTTP response header using defined pattern.
+4673 [ZAP-daemon] INFO org.parosproxy.paros.extension.filter.FilterFactory  - loaded filter Send ZAP session request ID
+4713 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Allows ZAP to check for updates
+4725 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionViewOption
+4726 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionEdit
+4726 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionFilter
+4727 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Provides a rest based API for controlling and accessing ZAP
+4891 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionState
+4892 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHistory
+4912 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Show hidden fields and enable disabled fields
+4913 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Search messages for strings and regular expressions 
+4922 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Encode/Decode/Hash...
+4926 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Allows you to intercept and modify requests and responses
+4926 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Passive scanner
+5052 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Script passive scan rules
+5053 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Application Error Disclosure
+5054 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Incomplete or No Cache-control and Pragma HTTP Header Set
+5055 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Content-Type Header Missing
+5055 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Cookie No HttpOnly Flag
+5055 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Cookie Without Secure Flag
+5055 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Cross-Domain JavaScript Source File Inclusion
+5056 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Web Browser XSS Protection Not Enabled
+5057 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Secure Pages Include Mixed Content
+5057 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Password Autocomplete in Browser
+5058 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Private IP Disclosure
+5058 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: Session ID in URL Rewrite
+5058 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: X-Content-Type-Options Header Missing
+5058 [ZAP-daemon] INFO org.zaproxy.zap.extension.pscan.ExtensionPassiveScan  - loaded passive scan rule: X-Frame-Options Header Not Set
+5095 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Allows you to view and manage alerts
+5096 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Active scanner, heavily based on the original Paros active scanner, but with additional tests added
+5103 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Spider used for automatically finding URIs on a site
+5110 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing A set of common popup menus for miscellaneous tasks
+5111 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Forced browsing of files and directories using code from the OWASP DirBuster tool
+5117 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionManualRequest
+5117 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Compares 2 sessions and generates an HTML file showing the differences
+5117 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Invoke external applications passing context related information such as URLs and parameters
+5118 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Handles anti cross site request forgery (CSRF) tokens
+5120 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionAuthentication
+6221 [ZAP-daemon] INFO org.zaproxy.zap.extension.authentication.ExtensionAuthentication  - Loaded authentication method types: [Form-based Authentication, HTTP/NTLM Authentication, Manual Authentication, Script-based Authentication]
+6223 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Creates a dynamic SSL certificate to allow SSL communications to be intercepted without warnings being generated by the browser
+6226 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Logs errors to the Output tab in development mode only
+6227 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionUserManagement
+6230 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Summarise and analyse FORM and URL parameters as well as cookies
+6230 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Script integration
+6394 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionForcedUser
+6395 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Extension handling HTTP sessions
+6396 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionDiff
+6396 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionRequestPostTableView
+6396 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Simple browser configuration
+6397 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionSessionManagement
+6483 [ZAP-daemon] INFO org.zaproxy.zap.extension.sessions.ExtensionSessionManagement  - Loaded session management method types: [Cookie-based Session Management, Http Authentication Session Management]
+6484 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelRequestFormTableView
+6484 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Summarise and analyse FORM and URL parameters as well as cookies
+6484 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionAuthorization
+6484 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Handles adding Global Excluded URLs
+6485 [ZAP-daemon] WARN org.zaproxy.zap.extension.globalexcludeurl.ExtensionGlobalExcludeURL  - GlobalExcludeURL.optionsLoaded()
+6485 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Adds menu item to refresh the Sites tree
+6485 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Adds support for configurable keyboard shortcuts for all of the ZAP menus.
+6485 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing OWASP ZAP User Guide
+6485 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionReport
+6486 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Allows you to configure which extensions are loaded when ZAP starts 
+6486 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelComponentonentAll
+6486 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelHexView
+6486 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelImageView
+6487 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelLargeRequestView
+6487 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelLargeResponseView
+6487 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelRequestQueryCookieTableView
+6487 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionHttpPanelSyntaxHighlightTextView
+6487 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Active Scan Rules
+6487 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Translations of the core language files
+6488 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing The ZAP Getting Started Guide
+6488 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing The Online menu links
+6489 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Passive Scan Rules
+6489 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Quick Start panel 
+6489 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing ExtensionSaveRawHttpMessage
+6490 [ZAP-daemon] INFO org.parosproxy.paros.extension.ExtensionLoader  - Initializing Tips and Tricks
+6493 [Thread-3] INFO org.zaproxy.zap.extension.dynssl.ExtensionDynSSL  - Creating new root CA certificate
+7257 [ZAP-daemon] INFO org.zaproxy.zap.DaemonBootstrap  - ZAP is now listening on localhost:8500
+7724 [Thread-3] INFO org.zaproxy.zap.extension.dynssl.ExtensionDynSSL  - New root CA certificate created
+------- END Prebuild -------
+[demo] $ /bin/sh -xe /tmp/hudson1967197186464329342.sh
++ echo Test
+Test
++ export ADRIAN=http://172.17.0.3
++ export PROXY=localhost:8500
++ curl -x localhost:8500 -L http://172.17.0.3
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2005  100  2005    0     0  20474      0 --:--:-- --:--:-- --:--:-- 20670
+ZAP Error [java.net.ConnectException]: Connection refused
+
+Stack Trace:
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:286)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Unknown Source)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Unknown Source)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.parosproxy.paros.network.HttpSender.executeMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.runMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.send(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAuthenticated(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.processHttp(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
++ echo Gotcha
+Gotcha
++ curl -x localhost:8500 -L http://172.17.0.3/index.php?id=5
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2005  100  2005    0     0  61373      0 --:--:-- --:--:-- --:--:-- 62656
+ZAP Error [java.net.ConnectException]: Connection refused
+
+Stack Trace:
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:286)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Unknown Source)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Unknown Source)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.parosproxy.paros.network.HttpSender.executeMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.runMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.send(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAuthenticated(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.processHttp(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
++ echo Gotcha on 5
+Gotcha on 5
++ curl -x localhost:8500 -L http://172.17.0.3/index.php?id=6
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2005  100  2005    0     0   182k      0 --:--:-- --:--:-- --:--:--  195k
+ZAP Error [java.net.ConnectException]: Connection refused
+
+Stack Trace:
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:286)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Unknown Source)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Unknown Source)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.parosproxy.paros.network.HttpSender.executeMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.runMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.send(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAuthenticated(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.processHttp(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
++ echo Gotcha on 6
+Gotcha on 6
++ curl -x localhost:8500 -L http://172.17.0.3/b/test.php
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2005  100  2005    0     0   117k      0 --:--:-- --:--:-- --:--:--  122k
+ZAP Error [java.net.ConnectException]: Connection refused
+
+Stack Trace:
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:286)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Unknown Source)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Unknown Source)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.parosproxy.paros.network.HttpSender.executeMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.runMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.send(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAuthenticated(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.processHttp(Unknown Source)
+	at org.parosproxy.paros.core.proxy.ProxyThread.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
++ echo Scanned the test page
+Scanned the test page
++ curl -x 127.0.0.1:8500 -L http://zap/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1084  100  1084    0     0  34608      0 --:--:-- --:--:-- --:--:-- 36133
+<head>
+<title>ZAP API UI</title>
+</head>
+<body>
+<h1>Welcome to the OWASP Zed Attack Proxy (ZAP)</h1><p>ZAP is an easy to use integrated penetration testing tool for finding vulnerabilities in web applications.</p><p></p><p>Please be aware that you should only attack applications that you have been specifically been given permission to test.</p><h2>Proxy Configuration</h2><p>To use ZAP effectively it is recommended that you configure your browser to proxy via ZAP.</p><p></p><p>You can do that manually or by configuring your browser to use the generated <a href="/OTHER/core/other/proxy.pac">PAC file</a>.</p></html><h2>Links</h2><li><a href="/UI">Local API</a></li><li><a href="https://www.owasp.org/index.php/ZAP">ZAP Homepage</a></li><li><a href="https://github.com/zaproxy/zaproxy/wiki/Introduction">ZAP Wiki</a></li><li><a href="http://groups.google.com/group/zaproxy-users">ZAP User Group</a></li><li><a href="http://groups.google.com/group/zaproxy-develop">ZAP Developer Group</a></li><li><a href="https://github.com/zaproxy/zaproxy/issues">Report an issue</a></li></body>
++ curl -x 127.0.0.1:8500 -L http://zap/JSON/core/view/sites/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    31  100    31    0     0    656      0 --:--:-- --:--:-- --:--:--   673
+{"sites":["http://172.17.0.3"]}+ echo *
+*
++ curl -x localhost:8500 -L http://zap/JSON/core/view/urls/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   119  100   119    0     0  11938      0 --:--:-- --:--:-- --:--:-- 13222
+{"urls":["http://172.17.0.3/","http://172.17.0.3/index.php?id=5","http://172.17.0.3/b","http://172.17.0.3/b/test.php"]}+ echo ================
+================
++ curl -x localhost:8500 -L http://zap/UI/context/view/contextList/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   866  100   866    0     0  77266      0 --:--:-- --:--:-- --:--:-- 72166
+<head>
+<title>ZAP API UI</title>
+</head>
+<body>
+<script>
+function submitScript() {
+var format = document.getElementById('zapapiformat').value
+var url = '/' + format + '/context/view/contextList/'
+var form=document.getElementById('zapform');
+form.action = url;
+form.submit();
+}
+</script>
+<h1><a href="/UI/">ZAP API UI</a></h1>
+<h2><a href="/UI/context/">Component: context</a></h2>
+<h3>View:contextList</h3>
+List context names of current session<form id="zapform" name="zapform"><table>
+<tr><td>Output format</td><td>
+<select id="zapapiformat" name="zapapiformat">
+<option value="JSON">JSON</option>
+<option value="JSONP" disabled>JSONP</option>
+<option value="HTML">HTML</option>
+<option value="XML">XML</option>
+</select>
+</td></tr>
+<tr><td></td><td><input id="button" value="contextList" type="button" onclick="submitScript();"></td></tr>
+</table>
+</form>
+</body>
++ curl -x localhost:8500 -L http://zap/JSON/ascan/action/scan/?url=http://172.17.0.3
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     08351 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Path Traversal
+8352 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Remote File Inclusion
+8353 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Server Side Include
+8362 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Reflected)
+8363 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Persistent)
+8363 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin SQL Injection
+8367 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Server Side Code Injection
+8368 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Remote OS Command Injection
+8368 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Directory Browsing
+8368 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin External Redirect
+8368 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Buffer Overflow
+8371 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Format String Error
+8371 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin CRLF Injection
+8372 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Parameter Tampering
+8372 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Persistent) - Prime
+8372 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Persistent) - Spider
+8373 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Script Active Scan Rules
+8374 [ZAP-ProxyThread-10] INFO org.parosproxy.paros.core.scanner.Scanner  - scanner started
+100    12  100    12    0     0     68      0 --:--:-- --:--:-- --:--:--    68
+{"scan":"0"}Perform ZAProxy
+8382 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Path Traversal
+8384 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Remote File Inclusion
+8385 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Server Side Include
+8386 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Reflected)
+8387 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Persistent)
+8388 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin SQL Injection
+8388 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Server Side Code Injection
+8388 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Remote OS Command Injection
+8389 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Directory Browsing
+8392 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin External Redirect
+8394 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Buffer Overflow
+8395 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Format String Error
+8400 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin CRLF Injection
+8401 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Parameter Tampering
+8401 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Persistent) - Prime
+8403 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Cross Site Scripting (Persistent) - Spider
+8404 [Thread-9] INFO org.parosproxy.paros.core.scanner.PluginFactory  - loaded plugin Script Active Scan Rules
+8426 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - start host http://172.17.0.3 | TestPathTraversal strength MEDIUM threshold MEDIUM
+8471 [ZAP-ActiveScanner-1] WARN org.zaproxy.zap.extension.ascanrules.TestPathTraversal  - Error scanning parameters for Path Traversal: Connection refused
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:286)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Unknown Source)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Unknown Source)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.parosproxy.paros.network.HttpSender.executeMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.runMethod(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.send(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAuthenticated(Unknown Source)
+	at org.parosproxy.paros.network.HttpSender.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.scanner.AbstractPlugin.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.scanner.AbstractPlugin.sendAndReceive(Unknown Source)
+	at org.parosproxy.paros.core.scanner.AbstractPlugin.sendAndReceive(Unknown Source)
+	at org.zaproxy.zap.extension.ascanrules.TestPathTraversal.sendAndCheckPayload(TestPathTraversal.java:444)
+	at org.zaproxy.zap.extension.ascanrules.TestPathTraversal.scan(TestPathTraversal.java:285)
+	at org.parosproxy.paros.core.scanner.AbstractAppParamPlugin.scan(Unknown Source)
+	at org.parosproxy.paros.core.scanner.AbstractAppParamPlugin.scanVariant(Unknown Source)
+	at org.parosproxy.paros.core.scanner.AbstractAppParamPlugin.scan(Unknown Source)
+	at org.parosproxy.paros.core.scanner.AbstractPlugin.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Skip loadSession
+URL http://*.workdaysuv.com/ added to Context [2]
+SCANMOD : NOT_AUTHENTICATED
+Skip spidering the site [http://*.workdaysuv.com/]
+Skip Ajax spidering the site [http://*.workdaysuv.com/]
+Skip scanning the site [http://*.workdaysuv.com/]
+8649 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - completed host/plugin http://172.17.0.3 | TestPathTraversal in 0.223s
+8650 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - start host http://172.17.0.3 | TestRemoteFileInclude strength MEDIUM threshold MEDIUM
+8673 [ZAP-ActiveScanner-1] ERROR org.zaproxy.zap.extension.ascanrules.TestRemoteFileInclude  - Error scanning parameters for Path Traversal: Connection refused
+8884 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - completed host/plugin http://172.17.0.3 | TestRemoteFileInclude in 0.234s
+8885 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - start host http://172.17.0.3 | TestServerSideInclude strength MEDIUM threshold MEDIUM
+File [/var/jenkins_home/workspace/demo/demo.html] saved
+Skipped creating jiras
+Save session to [/var/jenkins_home/workspace/demo/74]
+9072 [ZAP-ProxyThread-14] INFO org.parosproxy.paros.control.Control  - Save Session
+9074 [ZAP-ProxyThread-14] INFO org.parosproxy.paros.core.scanner.Scanner  - scanner stopped
+9095 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - stopped host/plugin http://172.17.0.3 | TestServerSideInclude in 0.21s
+9095 [Thread-10] INFO org.parosproxy.paros.core.scanner.HostProcess  - completed host http://172.17.0.3 in 0.682s
+9096 [Thread-9] INFO org.parosproxy.paros.core.scanner.Scanner  - scanner completed in 0.722s
+9125 [Thread-21] INFO hsqldb.db.HSQLDB379AF3DEBD.ENGINE  - dataFileCache commit start
+9160 [Thread-21] INFO hsqldb.db.HSQLDB379AF3DEBD.ENGINE  - Database closed
+9373 [Thread-21] INFO hsqldb.db.HSQLDB379AF3DEBD.ENGINE  - dataFileCache open start
+9380 [Thread-21] INFO hsqldb.db.HSQLDB379AF3DEBD.ENGINE  - dataFileCache open end
+Total alerts = 		ApiResponseElement numberOfAlerts = 0
+
+Total messages = 		ApiResponseElement numberOfMessages = 4
+
+Shutdown ZAProxy
+Finished: SUCCESS

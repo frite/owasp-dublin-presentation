@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fr.novia.zaproxyplugin.ZAProxyBuilder_-ZAProxyBuilderDescriptorImpl plugin="zaproxy@1.2.1">
+  <zapProxyDefaultHost>localhost</zapProxyDefaultHost>
+  <zapProxyDefaultPort>8500</zapProxyDefaultPort>
+  <jiraBaseURL></jiraBaseURL>
+  <jiraUserName></jiraUserName>
+  <jiraPassword></jiraPassword>
+</fr.novia.zaproxyplugin.ZAProxyBuilder_-ZAProxyBuilderDescriptorImpl>

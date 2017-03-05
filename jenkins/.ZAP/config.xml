@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<version>2004002</version>
+<userDir/>
+<connection>
+		<proxyChain>
+			<hostName/>
+			<port>8080</port>
+			
+			<realm/>
+			<userName/>
+			<password/>		
+			<prompt>false</prompt>
+		<enabled>false</enabled>
+</proxyChain>
+		<auth/>
+		<securityProtocolsEnabled>
+			<protocol>SSLv3</protocol>
+			<protocol>TLSv1</protocol>
+			<protocol>TLSv1.1</protocol>
+			<protocol>TLSv1.2</protocol>
+		</securityProtocolsEnabled>
+	<timeoutInSecs>20</timeoutInSecs>
+</connection>
+<proxy>
+		<ip>localhost</ip>
+		<port>8500</port>
+		<reverseProxy>
+			<use>0</use>	
+			<ip>localhost</ip>
+			<httpPort>80</httpPort>
+			<httpsPort>443</httpsPort>
+		</reverseProxy>		
+		<securityProtocolsEnabled>
+			<protocol>SSLv3</protocol>
+			<protocol>TLSv1</protocol>
+			<protocol>TLSv1.1</protocol>
+			<protocol>TLSv1.2</protocol>
+		</securityProtocolsEnabled>
+	</proxy>
+<view>
+		<processImages>0</processImages>
+		<displayOption>1</displayOption>
+		<editorView>2</editorView>
+		<brkPanelView>0</brkPanelView>
+		<showMainToolbar>1</showMainToolbar>
+	</view>
+<start>
+        <checkForUpdates>false</checkForUpdates>
+    <dayLastChecked/>
+</start>
+<certificate>
+		<use>0</use>
+		<clientCertLocation/>
+		<experimentalSlotListIndex>false</experimentalSlotListIndex>
+	</certificate>
+<spider>
+		<thread>2</thread>
+		<maxDepth>5</maxDepth>
+		
+		<postform>true</postform>
+		<processform>true</processform>
+		<sendCookies>false</sendCookies>
+		<skipurl/>
+		<requestwait>200</requestwait>
+		<parseComments>true</parseComments>
+		<parseRobotsTxt>true</parseRobotsTxt>
+	<handleParameters>USE_ALL</handleParameters>
+</spider>
+<scanner>
+		<hostPerScan>2</hostPerScan>
+		<threadPerHost>2</threadPerHost>
+	<defaultPolicy>OnlySQLInjection</defaultPolicy>
+</scanner>
+<portscan>
+		<threadPerHost>5</threadPerHost>
+		<maxPort>10240</maxPort>
+	</portscan>
+<pscans>
+		<autoTagScanners>
+			<scanner>
+				<name>html_tag_form</name>
+				<type>TAG</type>
+				<config>Form</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>&lt;form</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_tag_password</name>
+				<type>TAG</type>
+				<config>Password</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>&lt;password\s</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_type_password</name>
+				<type>TAG</type>
+				<config>Password</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>type\s*=\s*['"]?password['"]?</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_type_hidden</name>
+				<type>TAG</type>
+				<config>Hidden</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>type\s*=\s*['"]?hidden['"]?</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_type_upload</name>
+				<type>TAG</type>
+				<config>Upload</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>type\s*=\s*['"]?file['"]?</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_tag_object</name>
+				<type>TAG</type>
+				<config>Object</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>&lt;object\s</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_tag_script</name>
+				<type>TAG</type>
+				<config>Script</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>&lt;script</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_mailto</name>
+				<type>TAG</type>
+				<config>MailTo</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>&lt;.*href\s*['"]?mailto:</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_setcookie</name>
+				<type>TAG</type>
+				<config>SetCookie</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex>set-cookie</resHeadRegex>
+				<resBodyRegex/>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_comment1</name>
+				<type>TAG</type>
+				<config>Comment</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>/\*</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+			<scanner>
+				<name>html_comment2</name>
+				<type>TAG</type>
+				<config>Comment</config>
+				<reqUrlRegex/>
+				<reqHeadRegex/>
+				<resHeadRegex/>
+				<resBodyRegex>&lt;!--</resBodyRegex>
+				<enabled>true</enabled>
+			</scanner>
+		</autoTagScanners>
+	</pscans>
+<addons>
+<block/>
+</addons>
+<api>
+<key>ZAPROXY-PLUGIN</key>
+<disablekey>true</disablekey>
+</api>
+<reveal version="1">
+<enabled>false</enabled>
+</reveal>
+<dynssl>
+<param>
+<rootca>_u3-7QAAAAIAAAABAAAAAQARb3dhc3BfemFwX3Jvb3RfY2EAAAFVOq0yygAABQIwggT-MA4GCisGAQQBKgIRAQEFAASCBOp30q7TGC5I_aCWfVfRq1q0DpC20GigumZLlTH_uGtzkIlPiMZJOla2u8fQojUvEIZk-KnAzXedCj-JB9gtX3yaBxycOYt1CPkFE53tWfvBykzDAGhZxLPf9cqz_z-K71raPJVkh6WuO7nS00gyPlWOXCjZfYkAmZ3CTNtrPbYKVj8FkMzNM_Gfsx1HkeQSQU99PqHD5yzd9wQXkHL8r7vDxYO-MiyMzvvq9cng4-AUEb1klBdHZJXG1G472HlsdgFz9t_bndF-OqLg65tJhNPlb5flfigirPZPRWQU0ezdJSavvuSZjarvaaW2sTE7w-s7moSGExTfRUB2cHx5USAkS3pCNT17tuKEY8E7-b2TmNRbQT_MYn8P8772XW-IpTIkq32n1T-LllYbHL--toV4w5tAa5MoAC92ai2Y_bG73oPd46W7eB-q4xSQXqIbXRnRrjvxc6cavlC3HVq8cI_9hmHySsPLbZhwEAj6EnU7Q-PQDcImMGIwEmHCqRB5seA6u8cMgS9d541pzKDfoK2JKaXPiThDQ56EeBKMO13JbKKqXWJat7EEYe1fEjNa2vl2oE6jyUEVS6fXnAsR3FR7Xm65PrOsiIP9Igpv2b98hLFR-qgCsp2wGzk26tc70n2w-QzyORqiERidewUFDLbVM6lCvzt1HjzpHQqR3xwWcuWtLii-OQ2s0_KhOtN5EHUXOkRZV0fjNY43O8xLn-PJnAxQKQOC2M_CaFR7SGnbDwV_GLh83gbSoP8dejAGfFJa001Cr1dgHYuHRgmvKO69twDRiVlw1Gq-anmWw0x5OlOM4LKg4JzwxAZpIFgXqvrCQgw9bErY1_vcBgp1eFAn7ivn5sFlDS_DzjXzF5ON1-e5yMvmxlAn-w0IDAbVKEWdC8nopg_DsPyIT3p5-b_yu29bwQWbe8F_fTxNOA2KRb_fnEWy1A1QQA_JqEhgXsCOG5HnZNp951Pf2mozAQTUrhGfAXgt4dqUSLE7ikWdPcYMk49HqIk8iBSJRiFKhDvZhUB1HSVps_kHH1BJw8yArLD68xpDZwtGl4fgpJyrVnHv8SHFVIkTJIchtE47eBW0WQWSG8he0B4rhSMe3M60h_yo_NcwWD5ivJOB64sV0wdZgib6mkqNgNdbE4flg0pTRhlDlaubu5W81ENW_Bz9iBsBNv3cI4HYshsz9grKOUVP7HUwOWNqGfUu7fviPDKD2gfM7HLxskeTw7b0EaEeg7ifZ7ZB8W2gtNgj9klYSNlhKTl7rIY3XiIar5tYOzynBKAbMHsiI7aPZAk4TM1cpJD8-gv3FrGNXvZeou9m91vz2QneffzQtW9gYSwjYsXXlxR9JvsILIcIHqfVkkHt6erbDa1H_aYCei3PN5q-Qu7s5knJvBdfzzoP2BuUPbgURGCpZPA_9f49sBO4WkyF-e84zaCbB_aeGiXfhyiJiSnOCHnTIwdPAnjwY5w90A0vMmVkF3hqLqTCL_uqeFqIsJuLoeq2ivnl8MQq2vQz6b0NYoouSmEpuLrtlZxu0-pOa0FQ2NsSfn9e1YSBQeMZlB-fvjQZMAWqyMAuK8bAYlBpAjUbFV_ERfPvX61UT5Rfyl8KCx04XbtoglzfMowFGesK2FBovci9S2Yl-u7-onbRCOUToT_8i_J3--c53hM7JuZLWcF0vYMIAAAAAQAFWC41MDkAAAUOMIIFCjCCA_KgAwIBAgIEhf1LXzANBgkqhkiG9w0BAQsFADCBhTEnMCUGA1UEAwweT1dBU1AgWmVkIEF0dGFjayBQcm94eSBSb290IENBMRkwFwYDVQQHDBA5OWVlNTRiNjMxNDUxZWRmMRYwFAYDVQQKDA1PV0FTUCBSb290IENBMRowGAYDVQQLDBFPV0FTUCBaQVAgUm9vdCBDQTELMAkGA1UEBhMCeHgwHhcNMTYwNjEwMTQxNzU1WhcNMTcwNjEwMTQxNzU1WjCBhTEnMCUGA1UEAwweT1dBU1AgWmVkIEF0dGFjayBQcm94eSBSb290IENBMRkwFwYDVQQHDBA5OWVlNTRiNjMxNDUxZWRmMRYwFAYDVQQKDA1PV0FTUCBSb290IENBMRowGAYDVQQLDBFPV0FTUCBaQVAgUm9vdCBDQTELMAkGA1UEBhMCeHgwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCefj-HiQKl2Jc9ruZiP9ITo_BfDA0jyOnI-E9IXmYiHGg4Yvri2sH1AQcZ6N_e0gZACuvj_nmp0gCiivTv1stPLOHXdecd1hj03EI9DoWDorSU01XFx53zo86u8CS01E1HrJJnvPxRTv2iIB9FrSqm8saN8oJMw7sXIVStgwOIUhAQXkS07SIPzVX-IS6tafeZa4KYtmAtGSEgj98wZl5ruayss5EsiHvRh3ooIpF4fhr5ik5hZHWkKBOwpJycLO5-Jxc119-9JjbHyft55lWXUX0MqzH5lHCktP6EbucSiyeCrApE8QZqSMKYJYhbc2tmzDER8t9jZ2Ba8ltgF_4xAgMBAAGjggF-MIIBejCCATMGA1UdDgSCASoEggEmMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnn4_h4kCpdiXPa7mYj_SE6PwXwwNI8jpyPhPSF5mIhxoOGL64trB9QEHGejf3tIGQArr4_55qdIAoor079bLTyzh13XnHdYY9NxCPQ6Fg6K0lNNVxced86POrvAktNRNR6ySZ7z8UU79oiAfRa0qpvLGjfKCTMO7FyFUrYMDiFIQEF5EtO0iD81V_iEurWn3mWuCmLZgLRkhII_fMGZea7msrLORLIh70Yd6KCKReH4a-YpOYWR1pCgTsKScnCzuficXNdffvSY2x8n7eeZVl1F9DKsx-ZRwpLT-hG7nEosngqwKRPEGakjCmCWIW3NrZswxEfLfY2dgWvJbYBf-MQIDAQABMA8GA1UdEwEB_wQFMAMBAf8wCwYDVR0PBAQDAgG2MCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAk6ML4VTFY1B57WOYI-SO7M_gJJGfSuSczuUYVQPO6vJRTjar3ktuaP4a-_8tuTbSRTQGWKrT883XPWPK_pfQ_bSSsZgrS9HhmKiQ8SHaapeekxgLuld1IBZrMLkVqCqYEQgMmydZ1PBPAT37_ddkFaeHEsW8vca2bnu3DpCX3Kg5GURIZdoWURm-oE1y3CPueV9pSuUGxLhAbNS4XSW5dwhaf9A5p3bQZX71yvmHZ38uTYBjXlB5_dFhsPJjAgZqPSxkipFOiYQQtdfhkr7jnUvLmXLX8H9qC9rwjInSxc--B5z1LAEhSKaC7KiJ68KiHX4H7mTsMqVejDNfvKy6KpaPANBVWz5giLe9Tiu9g7py06QY</rootca>
+</param>
+</dynssl>
+<runnableAddOns>
+<addon>
+<id>pscanrules</id>
+<version>15</version>
+</addon>
+<addon>
+<id>help</id>
+<version>5</version>
+</addon>
+<addon>
+<id>diff</id>
+<version>6</version>
+</addon>
+<addon>
+<id>plugnhack</id>
+<version>9</version>
+</addon>
+<addon>
+<id>gettingStarted</id>
+<version>4</version>
+</addon>
+<addon>
+<id>invoke</id>
+<version>3</version>
+</addon>
+<addon>
+<id>coreLang</id>
+<version>9</version>
+</addon>
+<addon>
+<id>quickstart</id>
+<version>17</version>
+</addon>
+<addon>
+<id>saverawmessage</id>
+<version>2</version>
+</addon>
+<addon>
+<id>bruteforce</id>
+<version>5</version>
+</addon>
+<addon>
+<id>ascanrules</id>
+<version>22</version>
+</addon>
+<addon>
+<id>onlineMenu</id>
+<version>4</version>
+</addon>
+<addon>
+<id>tips</id>
+<version>5</version>
+</addon>
+<addon>
+<id>reveal</id>
+<version>2</version>
+</addon>
+</runnableAddOns>
+</config>
